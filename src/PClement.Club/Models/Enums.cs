@@ -11,6 +11,13 @@ namespace PClement.Club.Models
         Female
     }
 
+    public enum MemberType
+    {
+        Staff,
+        Player,
+        Referee
+    }
+
     public enum DominantSide
     {
         Right,
@@ -113,6 +120,35 @@ namespace PClement.Club.Models
         President,
         VicePrecident,
         Staff,
-        Coach
+        Coach,
+        CoachAndPlayer
+    }
+
+    public enum CardType
+    {
+        Red,
+        Yellow
+    }
+
+    public enum GameHalf
+    {
+        First,
+        Second,
+        AdditionalFirst,
+        AdditionalSecond
+    }
+
+    public enum GameEvent
+    {
+        Substitution,
+        Card,
+        Goal
+    }
+
+    public enum FieldType
+    {
+        Turf,
+        ArtificialTurf,
+        ConsolidatedGround
     }
 }

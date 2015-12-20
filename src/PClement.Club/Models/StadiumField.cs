@@ -5,42 +5,20 @@ using System.Threading.Tasks;
 
 namespace PClement.Club.Models
 {
-    public class Club
+    public class StadiumField
     {
         /// <summary>
         /// Technical GUID
         /// </summary>
         public Guid Id { get; set; }
 
-        /// <summary>
-        /// Name of the club
-        /// </summary>
-        public String Name { get; set; }
-
-        /// <summary>
-        /// Club's creation date
-        /// </summary>
-        public DateTime CreationDate { get; set; }
-
-
-        public string Address { get; set; }
-        public Uri MapUri { get; set; }
-
-        public byte[] Flag { get; set; }
-
         public Guid StadiumId { get; set; }
         public Stadium Stadium { get; set; }
 
-        public Guid PresidentId { get; set; }
-        public Member President { get; set; }
-        public List<Member> Staff { get; set; }
+        public string FieldName { get; set; }
+        public FieldType FieldType { get; set; }
 
-        /// <summary>
-        /// Teams 
-        /// </summary>
-        public List<Team> Teams { get; set; }
-        
-#region Common properties
+        #region Common properties
 
         /// <summary>
         /// Indicates if this record is active in database

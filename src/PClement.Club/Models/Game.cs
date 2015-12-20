@@ -1,41 +1,39 @@
-﻿using System;
+﻿using PClement.Club.Models.Competition;
+using PClement.Club.Models.GameEvents;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace PClement.Club.Models
 {
-    public class Member
+    public class Game
     {
         /// <summary>
         /// Technical GUID
         /// </summary>
         public Guid Id { get; set; }
 
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string NickName { get; set; }
-        public DateTime BirthDate { get; set; }
-        public string LicenceNumber { get; set; }
+        public Guid CompetitionSeasonId { get; set; }
+        public CompetitionSeason CompetitionSeason { get; set; }
+        public DateTime Date { get; set; }
+        //TODO: add properties : temperature, weather
+        public Guid StadiumFieldId { get; set; }
+        public StadiumField StadiumField { get; set; }
         
+        public Guid ReceivingClubId { get; set; }
+        public Club ReceivingClub { get; set; }
+        public Guid ReceivingTeamId { get; set; }
+        public Team ReceivingTeam { get; set; }
+        public Guid VisigingClubId { get; set; }
+        public Club VisigingClub { get; set; }
+        public Guid VisitingTeamId { get; set; }
+        public Team VisitingTeam { get; set; }
+
+        public List<Card> YellowCards { get; set; }
+        public List<Card> RedCard { get; set; }
+        public List<Goal> Goals { get; set; }
         
-
-        #region Staff member properties
-
-        public StaffRole StaffRole { get; set; }
-        public Team MainCoachedTeam { get; set; }
-
-        #endregion
-
-        #region Player properties
-
-        public DominantSide DominantSide { get; set; }
-        public PlayerPosition Position { get; set; } 
-
-        #endregion
-
-
-
         #region Common properties
 
         /// <summary>

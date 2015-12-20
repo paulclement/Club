@@ -3,44 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PClement.Club.Models
+namespace PClement.Club.Models.Competition
 {
-    public class Club
+    public class CompetitionSeason
     {
         /// <summary>
         /// Technical GUID
         /// </summary>
         public Guid Id { get; set; }
 
-        /// <summary>
-        /// Name of the club
-        /// </summary>
-        public String Name { get; set; }
-
-        /// <summary>
-        /// Club's creation date
-        /// </summary>
-        public DateTime CreationDate { get; set; }
-
-
-        public string Address { get; set; }
-        public Uri MapUri { get; set; }
-
-        public byte[] Flag { get; set; }
-
-        public Guid StadiumId { get; set; }
-        public Stadium Stadium { get; set; }
-
-        public Guid PresidentId { get; set; }
-        public Member President { get; set; }
-        public List<Member> Staff { get; set; }
-
-        /// <summary>
-        /// Teams 
-        /// </summary>
-        public List<Team> Teams { get; set; }
+        public Guid CompetitionId { get; set; }
+        public Competition Competition { get; set; }
+        public int Year { get; set; }
+        public Guid DivisionId { get; set; }
+        public Division Division { get; set; }
         
-#region Common properties
+        public List<Team> Teams { get; set; }
+        public List<Game> Games { get; set; }
+
+        #region Common properties
 
         /// <summary>
         /// Indicates if this record is active in database

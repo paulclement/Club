@@ -22,8 +22,15 @@ namespace PClement.Club.Models
         /// </summary>
         public AgeCategory Category { get; set; }
 
+        public Guid CoachId { get; set; }
+        public Member Coach { get; set; }
+
+        public List<Member> Players { get; set; }
+
+        #region Common properties
+
         /// <summary>
-        /// Indicates if this team is active in database
+        /// Indicates if this record is active in database
         /// </summary>
         public bool IsActive { get; set; }
 
@@ -36,5 +43,17 @@ namespace PClement.Club.Models
         /// Time of creation in database
         /// </summary>
         public DateTime CreationTime { get; set; }
+
+        /// <summary>
+        /// User of last update in database
+        /// </summary>
+        public string LastUpdateUser { get; set; }
+
+        /// <summary>
+        /// Time of last update in database
+        /// </summary>
+        public DateTime LastUpdateTime { get; set; }
+
+        #endregion
     }
 }

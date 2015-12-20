@@ -5,13 +5,18 @@ using System.Threading.Tasks;
 
 namespace PClement.Club.Models
 {
-    public class YellowCard
+    public class Stadium
     {
         /// <summary>
         /// Technical GUID
         /// </summary>
         public Guid Id { get; set; }
 
+        public string Name { get; set; }
+        public string Address { get; set; }
+        public Uri MapURI { get; set; }
+
+        public List<StadiumField> Fields { get; set; }
 
         #region Common properties
 

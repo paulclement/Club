@@ -17,6 +17,17 @@ namespace PClement.Club.Models
         public Guid CompetitionSeasonId { get; set; }
         public CompetitionSeason CompetitionSeason { get; set; }
         public DateTime Date { get; set; }
+        public int SpectatorsCount { get; set; }
+        public bool HasBeenPostponed { get; set; }
+        public PostponingReason PostponingReason { get; set; }
+        public string CustomPostponingReason { get; set; }
+
+
+        /// <summary>
+        /// Step in the competition depending on the competition format, ie: 17th game, or semi-finals, ...
+        /// </summary>
+        public string Step { get; set; }
+
         //TODO: add properties : temperature, weather
         public Guid StadiumFieldId { get; set; }
         public StadiumField StadiumField { get; set; }

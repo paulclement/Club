@@ -151,4 +151,32 @@ namespace PClement.Club.Models
         ArtificialTurf,
         ConsolidatedGround
     }
+    public enum CompetitionFormat
+    {
+        League,
+        Cup
+    }
+    public enum CompetitionStepFormat
+    {
+        League,
+        Tree
+    }
+    public enum PostponingReason
+    {
+        UnplayableTurf,
+        BadWeather
+    }
+    //TODO: définir algos
+    public enum LeagueRankingAlgorithm
+    {
+        /// <summary>
+        /// points -> différence de buts -> meilleur attaque
+        /// </summary>
+        Algorithm1,
+        /// <summary>
+        /// points -> confrontations directe -> différence de buts -> meilleur attaque
+        /// </summary>
+        Algorithm2,
+        Algorithm3
+    }
 }

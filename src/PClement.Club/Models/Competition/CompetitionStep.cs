@@ -5,21 +5,32 @@ using System.Threading.Tasks;
 
 namespace PClement.Club.Models.Competition
 {
-    public class CompetitionSeason
+    public class CompetitionStep
     {
         /// <summary>
         /// Technical GUID
         /// </summary>
         public Guid Id { get; set; }
 
+        public string Name { get; set; }
+
         public Guid CompetitionId { get; set; }
         public Competition Competition { get; set; }
-        public int Year { get; set; }
-        public Guid DivisionId { get; set; }
-        public Division Division { get; set; }
-        
-        public List<Team> Teams { get; set; }
-        public List<Game> Games { get; set; }
+
+        public Guid ParentCompetitionStepId { get; set; }
+        public CompetitionStep ParentCompetitionStep { get; set; }
+
+        public CompetitionStepFormat Format { get; set; }
+        //TODO: cup step format
+        #region League format
+
+        public int TeamsCount { get; set; }
+        public int ReceivingGamesCount { get; set; }
+        public int VisitingGamesCount { get; set; }
+        public LeagueRankingAlgorithm LeagueRankingAlgorithm { get; set; }
+
+
+        #endregion
 
         #region Common properties
 

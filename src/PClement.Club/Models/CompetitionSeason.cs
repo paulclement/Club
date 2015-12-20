@@ -1,43 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using PClement.Club.Models.Competition;
 
 namespace PClement.Club.Models
 {
-    public class Member
+    public class CompetitionSeason
     {
         /// <summary>
         /// Technical GUID
         /// </summary>
         public Guid Id { get; set; }
 
-
-        public string IdentityId { get; set; }
-
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string NickName { get; set; }
-        public DateTime BirthDate { get; set; }
-        public string LicenceNumber { get; set; }
+        public Guid CompetitionId { get; set; }
+        public Competition.Competition Competition { get; set; }
+        public int Year { get; set; }
+        public Guid DivisionId { get; set; }
+        public Division Division { get; set; }
         
-        
-
-        #region Staff member properties
-
-        public StaffRole StaffRole { get; set; }
-        public Team MainCoachedTeam { get; set; }
-
-        #endregion
-
-        #region Player properties
-
-        public DominantSide DominantSide { get; set; }
-        public PlayerPosition Position { get; set; } 
-
-        #endregion
-
-
+        public List<Team> Teams { get; set; }
+        public List<Game> Games { get; set; }
 
         #region Common properties
 

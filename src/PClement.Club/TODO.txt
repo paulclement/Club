@@ -1,0 +1,24 @@
+﻿Partie Configuration:
+
+Créer une compétition
+	- Nom
+	- Format
+		-> Match amicaux
+		-> Championnat : nombre d'équipes, nombre de matches aller et retour contre chaque équipe, algorithme de classement
+		-> Coupe : phase de poule ? combien de phases de poules ?
+			-> Nombre d'equipes par poule, nombre de matches aller et retour par poule, algorithme de classement
+			-> Format d'arbre, combiens de niveaux ? matchs aller et retour ?
+
+Création automatique
+Création manuelle
+
+---------------------------------------
+
+Algorithmes de classement : 
+	- points -> différence de buts -> meilleur attaque
+	- points -> confrontations directe -> différence de buts -> meilleur attaque
+ect
+
+-----------------------------------------------------
+
+Créer une saison de compétition

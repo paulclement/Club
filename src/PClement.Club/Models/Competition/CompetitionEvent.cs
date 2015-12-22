@@ -3,44 +3,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PClement.Club.Models
+namespace PClement.Club.Models.Competition
 {
-    public class Club
+    /// <summary>
+    /// This class represent a competition step event.
+    /// If the competition step format is league, the event will be a match day.
+    /// If the competition step format is cup, the event will be a match day.
+    /// </summary>
+    public class CompetitionEvent
     {
         /// <summary>
         /// Technical GUID
         /// </summary>
         public Guid Id { get; set; }
 
+        public Guid ParentCompetitionStepId { get; set; }
+        public CompetitionStep ParentCompetitionStep { get; set; }
+
+        public int Index { get; set; }
+        public string Name { get; set; }
+        public DateTime Date { get; set; }
         /// <summary>
-        /// Name of the club
+        /// Si on genre 32eme de finale Allez (= 1) ou retour (2)
         /// </summary>
-        public String Name { get; set; }
-
-        /// <summary>
-        /// Club's creation date
-        /// </summary>
-        public DateTime CreationDate { get; set; }
+        public int SameEventIndex { get; set; }
 
 
-        public string Address { get; set; }
-        public Uri MapUri { get; set; }
 
-        public byte[] Flag { get; set; }
-
-        public Guid StadiumId { get; set; }
-        public Stadium Stadium { get; set; }
-
-        public Guid PresidentId { get; set; }
-        public Member President { get; set; }
-        public List<Member> Staff { get; set; }
-
-        /// <summary>
-        /// Teams 
-        /// </summary>
-        public List<Team> Teams { get; set; }
-
-        public List<Sponsor> Sponsors { get; set; }
 
         #region Common properties
 

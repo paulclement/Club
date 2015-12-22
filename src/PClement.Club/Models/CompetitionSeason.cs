@@ -14,8 +14,6 @@ namespace PClement.Club.Models
         public Guid CompetitionId { get; set; }
         public Competition.Competition Competition { get; set; }
         public int Year { get; set; }
-        public Guid DivisionId { get; set; }
-        public Division Division { get; set; }
         
         public List<Team> Teams { get; set; }
         public List<Game> Games { get; set; }

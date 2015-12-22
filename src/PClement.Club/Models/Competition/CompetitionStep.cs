@@ -12,25 +12,32 @@ namespace PClement.Club.Models.Competition
         /// </summary>
         public Guid Id { get; set; }
 
+        public int Index { get; set; }
         public string Name { get; set; }
 
         public Guid CompetitionId { get; set; }
         public Competition Competition { get; set; }
 
-        public Guid ParentCompetitionStepId { get; set; }
-        public CompetitionStep ParentCompetitionStep { get; set; }
-
         public CompetitionStepFormat Format { get; set; }
-        //TODO: cup step format
+        
+        #region Cup format
+
+        public int Depth { get; set; }
+
+        #endregion
+        
         #region League format
 
-        public int TeamsCount { get; set; }
+        public int NumberOfTeams { get; set; }
+        public int NumberOfGroups { get; set; }
         public int ReceivingGamesCount { get; set; }
         public int VisitingGamesCount { get; set; }
         public LeagueRankingAlgorithm LeagueRankingAlgorithm { get; set; }
 
-
         #endregion
+
+        public List<CompetitionEvent> Events { get; set; }
+
 
         #region Common properties
 

@@ -16,6 +16,10 @@ namespace PClement.Club.Models
 
         public Guid CompetitionSeasonId { get; set; }
         public CompetitionSeason CompetitionSeason { get; set; }
+        public Guid CompetitionStepId { get; set; }
+        public CompetitionStep CompetitionStep { get; set; }
+        public Guid CompetitionEventId { get; set; }
+        public CompetitionEvent CompetitionEvent { get; set; }
         public DateTime Date { get; set; }
         public int SpectatorsCount { get; set; }
         public bool HasBeenPostponed { get; set; }
@@ -45,6 +49,8 @@ namespace PClement.Club.Models
         public List<Card> RedCard { get; set; }
         public List<Goal> Goals { get; set; }
         
+        public List<Video> Videos { get; set; }
+
         #region Common properties
 
         /// <summary>

@@ -15,10 +15,8 @@ namespace PClement.Club.Models.Competition
         public string Name { get; set; }
         public RegionInfo Country { get; set; }
         public AgeCategory Category { get; set; }
-        public CompetitionFormat Format { get; set; }
 
         public List<CompetitionStep> Steps { get; set; }
-        public List<Division> Divisions { get; set; }
         public List<CompetitionSeason> Seasons { get; set; }
 
         #region Common properties

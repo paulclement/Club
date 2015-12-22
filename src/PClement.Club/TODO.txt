@@ -1,4 +1,9 @@
-﻿Partie Configuration:
+﻿Models
+
+
+---------------------------------------
+
+Partie Configuration:
 
 Créer une compétition
 	- Nom
@@ -22,3 +27,5 @@ ect
 -----------------------------------------------------
 
 Créer une saison de compétition
+
+Fiche joueur

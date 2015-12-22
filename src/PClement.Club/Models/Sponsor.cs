@@ -5,42 +5,19 @@ using System.Threading.Tasks;
 
 namespace PClement.Club.Models
 {
-    public class Club
+    public class Sponsor
     {
         /// <summary>
         /// Technical GUID
         /// </summary>
         public Guid Id { get; set; }
 
-        /// <summary>
-        /// Name of the club
-        /// </summary>
-        public String Name { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public Uri Website { get; set; }
+        public byte[] Logo { get; set; }
 
-        /// <summary>
-        /// Club's creation date
-        /// </summary>
-        public DateTime CreationDate { get; set; }
-
-
-        public string Address { get; set; }
-        public Uri MapUri { get; set; }
-
-        public byte[] Flag { get; set; }
-
-        public Guid StadiumId { get; set; }
-        public Stadium Stadium { get; set; }
-
-        public Guid PresidentId { get; set; }
-        public Member President { get; set; }
-        public List<Member> Staff { get; set; }
-
-        /// <summary>
-        /// Teams 
-        /// </summary>
-        public List<Team> Teams { get; set; }
-
-        public List<Sponsor> Sponsors { get; set; }
+        public List<Club> Clubs { get; set; }
 
         #region Common properties
 

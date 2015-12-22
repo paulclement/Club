@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PClement.Club.Models.Competition
+namespace PClement.Club.Models
 {
-    public class Division
+    public class Video
     {
         /// <summary>
         /// Technical GUID
         /// </summary>
         public Guid Id { get; set; }
 
-        public string  Name { get; set; }
-        public Guid ParentDivisionId { get; set; }
-        public Division ParentDivision { get; set; }
-        public Guid CompetitionId { get; set; }
-        public Competition Competition { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public Uri Uri { get; set; }
+
+        public List<Game> Games { get; set; }
 
         #region Common properties
 

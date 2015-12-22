@@ -18,6 +18,7 @@ namespace PClement.Club.Models.GameEvents
         public TimeSpan  Time { get; set; }
         public bool IsOwnGoal { get; set; }
         public GameHalf Half { get; set; }
+        public BodyPart BodyPart { get; set; }
 
         #region Common properties
 

@@ -137,6 +137,16 @@ namespace PClement.Club.Models
         AdditionalFirst,
         AdditionalSecond
     }
+    public enum BodyPart
+    {
+        RightFoot,
+        LeftFoot,
+        Head,
+        Chest,
+        RightKnee,
+        LeftKnee,
+        Back
+    }
 
     public enum GameEvent
     {
@@ -150,11 +160,6 @@ namespace PClement.Club.Models
         Turf,
         ArtificialTurf,
         ConsolidatedGround
-    }
-    public enum CompetitionFormat
-    {
-        League,
-        Cup
     }
     public enum CompetitionStepFormat
     {

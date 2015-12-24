@@ -7,6 +7,7 @@ using Microsoft.AspNet.Hosting;
 using Microsoft.Extensions.PlatformAbstractions;
 using Microsoft.AspNet.Builder;
 using Microsoft.Extensions.Logging;
+//using pclement.AspNet.Middlewares;
 
 namespace PClement.Club
 {
@@ -26,6 +27,7 @@ namespace PClement.Club
         protected override void AddEnvironmentSpecificMiddleware(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
             // no specific middleware for Production
+            //app.UseRequestLogger();
         }
 
     }

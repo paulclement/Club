@@ -9,6 +9,7 @@ using Microsoft.AspNet.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNet.Http;
+using pclement.AspNet.Middlewares;
 
 namespace PClement.Club
 {
@@ -38,23 +39,34 @@ namespace PClement.Club
 
         protected override void AddEnvironmentSpecificMiddleware(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
-            // Create a catch-all response
-            app.Run(async (context) =>
+            //// Create a catch-all response
+            //app.Run(async context =>
+            //{
+            //    //var logger = loggerFactory.CreateLogger("Catchall Endpoint");
+            //    //logger.LogInformation("No endpoint found for request {path}", context.Request.Path);
+            //    //await context.Response.WriteAsync("No endpoint found - try /api/todo.");
+
+
+            //    //if (context.Request.Path.Value.Contains("boom"))
+            //    //{
+            //    var executionTime = 1000;
+            //    var logger = loggerFactory.CreateLogger(typeof(Program).FullName);
+            //    logger.LogInformation($"Handled in {{{nameof(executionTime)}}} ms", executionTime);
+            //    //throw new Exception("boom!");
+            //    //}
+            //    await context.Response.WriteAsync("Hello World!");
+            //});
+
+            app.UseRequestLogger();
+
+
+            app.MapWhen(context => context.Request.Path.Value.Contains("boom"), (a) => a.Run(async c =>
             {
-                //var logger = loggerFactory.CreateLogger("Catchall Endpoint");
-                //logger.LogInformation("No endpoint found for request {path}", context.Request.Path);
-                //await context.Response.WriteAsync("No endpoint found - try /api/todo.");
-
-
-                //if (context.Request.Path.Value.Contains("boom"))
-                //{
                 var executionTime = 1000;
                 var logger = loggerFactory.CreateLogger(typeof(Program).FullName);
-                logger.LogInformation($"Handled in {{{nameof(executionTime)}}} ms", executionTime);
-                //throw new Exception("boom!");
-                //}
-                await context.Response.WriteAsync("Hello World!");
-            });
+                logger.LogDebug($"Handled in {{{nameof(executionTime)}}} ms", executionTime);
+                await c.Response.WriteAsync("Hello World!");
+            }));
         }
 
     }

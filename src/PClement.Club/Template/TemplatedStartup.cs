@@ -113,6 +113,6 @@ namespace PClement.Club.Template
 
 
         // Entry point for the application.
-        public static void Main(string[] args) => WebApplication.Run<Startup_old>(args);
+        public static void Main(string[] args) => WebApplication.Run<Startup>(args);
     }
 }
